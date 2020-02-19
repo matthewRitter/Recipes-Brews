@@ -37,7 +37,7 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="homePage.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown">
@@ -46,21 +46,21 @@
                             Find A Recipe
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Search</a>
+                            <a class="dropdown-item" href="search.html">Search</a>
                             <a class="dropdown-item" href="#">Favorites</a>
                             <a class="dropdown-item" href="#">Your Recipes</a>
                         </div>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="#">Sign In</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Register</a>
+                        <a class="nav-link" href="register.html">Register</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Find A Recipe</button>
                 </form>
             </div>
         </nav>
@@ -70,28 +70,50 @@
             Sign In
         </div>
 
-
-        <div class="form" style="border: 2px solid black;">
-            <div class="row" style="margin: 2%;">
+        <center>
+        <div class="form" style="border: 2px solid black; width: 50%; font-size: 1em;">
+            <div class="row" style="margin-bottom: 5%; margin-top: 5%;">
                 <div class="col" style="text-align: center;">
-                    <input id="userNameLogin" oninput="stopItalic()" inputtype="text" style="font-style: italic;" placeholder="Email or Username">
+                    <input class="formInput" id="userNameLogin" oninput="stopItalic()" inputtype="text" style="font-style: italic;" placeholder="Email or Username">
                 </div>
             </div>
             <div class="row">
                 <div class="col" style="text-align: center;">
-                    <input id="passwordLogin" type="password" style="font-style: italic;" placeholder="Password">
+                    <input class="formInput" id="passwordLogin" type="password" style="font-style: italic;" placeholder="Password">
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col" style="text-align: right; font-style: italic;">
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <div class="col-2">
+
+                </div>
+            </div>
+
+            <div class="row" style="margin-bottom: 2%;">
+                <div class="col" style="text-align: center; font-size: 1.5em;">
+                    <button onclick="signIn()" style="background-color: orange; color: white; width: 60%;">Sign In</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col" style="text-align: center; font-size: 1.5em;">
+                    <button style="background-color: orange; color: white; width: 60%;"><a style="color: white;" href="register.html">Create Account</a></button>
+                </div>
+            </div>
+
+
         </div>
+        </center>
 
 
 
-        <div>
+        <div style = "margin-bottom: 1000px;">
             Random Info
         </div>
 
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <div>
             More Random Info
         </div>
@@ -118,6 +140,13 @@
                 input.style.fontStyle = "normal";
             }
         }
+
+
+        function signIn(){
+            //Temp Function to be conencted to DB
+        }
+
+
     </script>
 
 

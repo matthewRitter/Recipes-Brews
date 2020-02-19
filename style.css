@@ -3,3 +3,11 @@
     text-align: center;
     font-weight: bold;
 }
+
+.formInput{
+    width: 60%;
+}
+
+a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
+    cursor: pointer;
+}
