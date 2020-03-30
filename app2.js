@@ -1,3 +1,5 @@
+//all of the packages and modules needed
+//helmet and session for security, bodyParser for the POST request, path for handling URL
 var mysql = require('mysql');
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -5,7 +7,7 @@ var path = require('path');
 var session=require('express-session');
 var helmet=require('helmet')
 var app2=express();
-
+//connects to the database with login credentials
 var con = mysql.createConnection({
   host: "localhost",
   user: "Leo",
@@ -13,6 +15,7 @@ var con = mysql.createConnection({
   database: "seschema"
 });
 
+//in express you have to instantiate the modules to use them
 app2.use(bodyParser.urlencoded({extended : true}));
 app2.use(express.static(path.join(__dirname, '/')));
 app2.use(bodyParser.json());
@@ -25,7 +28,7 @@ app2.use(session({
 	resave: true,
 	saveUninitialized: true
 }));
-
+//get request from client, server sends html
 app2.get('/',function(req,res){
   res.sendFile(path.join(__dirname+'/website.html'));
 });
@@ -44,7 +47,7 @@ app2.get('/homepage.html',function(req,res){
 
 app2.listen(process.env.port || 3000);
 console.log('Running at Port 3000');
-
+//post request from client, data given to server side for storage
 app2.post('/register.html',function(req,res){
     con.connect(function(err) {
     if (err) throw err;
