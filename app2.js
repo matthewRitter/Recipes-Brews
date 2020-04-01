@@ -56,7 +56,7 @@ app2.post('/register.html',function(req,res){
       con.query(sql,[values], function (err, result) {
       if (err) throw err;
       req.session.loggedin = true;
-      req.session.username = username;
+      req.session.username = req.body.username;
       });
     });
      res.redirect('/homepage.html');
