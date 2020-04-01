@@ -59,8 +59,7 @@ app2.post('/register.html',function(req,res){
       req.session.username = username;
       });
     });
-    res.write("Thank you for registering");
-     return res.redirect('/homepage.html');
+     res.redirect('/homepage.html');
 });
 
 app2.post('/login.html', function(req, res) {
